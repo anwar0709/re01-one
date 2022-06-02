@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="clear.css">
+
+</head>
+
+<body>
+    <!-- 背景图 -->
+    <div class="warpper">
+        <!-- 主界面 -->
+        <div class="main ">
+            <h1>我的页面</h1>
+            <!-- tab栏 -->
+
+            <div class="tab">
+                <div class="tab_list">
+                    <ul class="nav">
+                        <li class="onechild"><a href="javascript:;">我的</a>
+                            <!-- 下拉列表 第一列 -->
+                            <ul>
+                                <li class="current">
+                                    <a href="javascript:;">注册</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">登录</a>
+                                </li>
+                                <li class="wanshan">
+                                    <a href="javascript:;">完善个人信息</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="onechild"><a href="javascript:;">工具</a>
+                            <!-- 下拉列表 第二列 -->
+                            <ul>
+                                <li class="disn"></li>
+                                <li class="disn"></li>
+                                <li class="disn"></li>
+                                <li>
+                                    <a href="javascript:;">计算器</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 菜单页面主体区 -->
+            <div class="tab_con">
+                <span class="error"></span>
+                <div class="item" style="display: none;">
+                    <h2> 注册 页面</h2>
+                    <form action="" target="frameName">
+                        <table class="tabup">
+                            <div class="warpper_s">
+                                <img src="photo/2020061121140891147.png" alt="">
+                            </div>
+                            <tr>
+                                <td>账号:</td>
+                                <td><input type="text" class="rgt"></td>
+                                <td>
+                                    <p class="message1">请用手机号/QQ/邮箱注册</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>密码:</td>
+                                <td><input type="password" class="pswd1"></td>
+                                <td>
+                                    <p class="message2">密码长度要求6~20位</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>确认密码:</td>
+                                <td><input type="password" class="pswd2"></td>
+                                <td>
+                                    <p class="message3">请再输入一次密码</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="sps"> </p>
+                                </td>
+                                <td> <input type="submit btnn" value="注册" class="sbt"></td>
+                                <td><input type="reset btnn" value="重置" class="rst"></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <!-- 阻止提交表单跳转 -->
+                    <iframe width=0 height=0 src="" frameborder="0" name="frameName"></iframe>
+                </div>
+                <div class="item">
+                    <h2> 登录 页面</h2>
+                    <form action="">
+                        <table class="tabup">
+                            <div class="warpper_s">
+                                <img src="photo/2020010311083818450.png" alt="">
+                            </div>
+                            <tr>
+                                <td>账号:</td>
+                                <td><input type="text" class="lg_rgt"></td>
+                                <td>
+                                    <p class="login_message1"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>密码:</td>
+                                <td><input type="password" class="lg_pswd1"></td>
+                                <td>
+                                    <p class="login_message2"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="sps"> </p>
+                                </td>
+                                <td><button class="lg_btn" type="button">登录</button></td>
+                            </tr>
+                            <tr class="disn exit">
+
+                                <td><a href="javascript:;">退出账号</a></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="item">
+                    <h2> 完善个人信息 页面</h2>
+                    <form action="" target="frameName">
+                        <table class="tabupp">
+                            <div class="warpper_s">
+                                <img src="photo/2020082814270362598.png" alt="">
+                            </div>
+                            <tr class="elan">
+                                <td>账号:</td>
+                            </tr>
+                            <tr>
+                                <td class="uname">昵称:</td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td class="sex1">性别:</td>
+                                <td class="sex2"><input type="radio" name="1" id="sex" value="男">男<input type="radio" name="1" value="女" id="sex">女</td>
+                            </tr>
+                            <tr>
+                                <td class="day">出生日期:</td>
+                                <td> <input type="date"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="sps"> </p>
+                                </td>
+                                <td><input type="submit" value="保存" class="save"></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <!-- 阻止提交表单跳转 -->
+                    <iframe width=0 height=0 src="" frameborder="0" name="frameName"></iframe>
+                </div>
+                <div class="item">
+                    <h2> 计算器 页面</h2>
+                    <div id="calculator">
+                        <form name="calculator" action="" method="get">
+                            <div id="calcu-screen">
+                                <!--onfocus="this.blur()防止键盘输入-->
+                                <input type="text" name="numScreen" class="screen" value="0" onfocus="this.blur();" />
+                            </div>
+                            <div id="calcu-btn">
+                                <ul>
+                                    <!--按钮-->
+                                    <li onclick="command(7)">7</li>
+                                    <li onclick="command(8)">8</li>
+                                    <li onclick="command(9)">9</li>
+                                    <li class="tool" onclick="del()">&larr;</li>
+                                    <li class="tool yel" onclick="clearscreen()">C</li>
+                                    <li onclick="command(4)">4</li>
+                                    <li onclick="command(5)">5</li>
+                                    <li onclick="command(6)">6</li>
+                                    <li class="tool" onclick="times()">&times;</li>
+                                    <li class="tool" onclick="divide()">&divide;</li>
+                                    <li onclick="command(1)">1</li>
+                                    <li onclick="command(2)">2</li>
+                                    <li onclick="command(3)">3</li>
+                                    <li class="tool" onclick="plus()">+</li>
+                                    <li class="tool" onclick="minus()">-</li>
+                                    <li onclick="command(0)">0</li>
+                                    <li onclick="dzero()">00</li>
+                                    <li onclick="dot()">.</li>
+                                    <li class="tool" onclick="persent()">%</li>
+                                    <li class="tool" onclick="equal()">=</li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+
+                    // 下拉菜单
+                    $(".nav>li").hover(function() {
+                            $(this).children("ul").stop().slideToggle(200);
+                        })
+                        // tab栏内li的切换
+                    $(".tab_list ul li ul li").click(function() {
+                            $(this).addClass("current").siblings().removeClass("current");
+                            var index = $(this).index();
+                            $(".tab_con .item").eq(index).fadeIn(1000).siblings().hide();
+                            $('.error').fadeIn(1000);
+                            $('.error').on('click', function() {
+                                $(".tab_con .item").fadeOut(1000);
+                                $('.error').fadeOut(1000);
+                            })
+
+                        })
+                        // 注册
+                    $('.sbt').click(function() {
+                            var text1 = $('.rgt').val();
+                            var text2 = $('.pswd1').val();
+                            var text3 = $('.pswd2').val();
+
+                        })
+                        // 登录
+
+                    $('.lg_btn').on('click', function() {
+                        if ($('.lg_rgt').val() == '') {
+                            alert("账号或者密码不得为空")
+                        } else if ($('.lg_rgt').val() == $('.rgt').val() && $('.lg_pswd1').val() == $('.pswd1').val()) {
+
+                            alert("登陆成功")
+                                // 完善信息的添加账号行
+                            var td = $("<td></td>");
+                            td.html($(".rgt").val());
+                            $(".elan").one().append(td);
+                            // 登录成功后添加账号行
+                            var td = $("<td></td>");
+                            td.html($(".rgt").val());
+                            $(".exit").prepend(td);
+                            $('.exit').show().siblings().hide();
+
+                        } else {
+                            alert('账号或者密码错误');
+                        }
+                    })
+
+
+                    $('.exit a').on('click', function() {
+                            $('.exit').hide().siblings().show();
+                            $(this).parents("td").siblings().remove();
+                        })
+                        // 完善信息
+
+                    $('.save').on('click', function() {
+
+                        $('.uname').siblings().hide();
+                        $('.sex1').siblings().hide();
+                        $('.day').siblings().hide();
+                        var td = $("<td></td>");
+                        td.html($(".uname").siblings().children('input').val());
+                        $(".tabupp tr").eq(1).append(td);
+                        var td = $("<td></td>");
+                        td.html($(".sex1").siblings().children('input').val());
+                        $(".tabupp tr").eq(2).append(td);
+                        var td = $("<td></td>");
+                        td.html($(".day").siblings().children('input').val());
+                        $(".tabupp tr").eq(3).append(td);
+                    })
+                })
+                // js代码区
+                // 注册界面
+            var sus1 = 0;
+            var sus2 = 0;
+            var sus3 = 0;
+            var rgt = document.querySelector('.rgt');
+            var message1 = document.querySelector('.message1');
+            rgt.onblur = function() {
+                var flag = false;
+                var phone = /0?(1)[0-9]{10}/;
+                var Email = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+                var qq = /[1-9]([0-9]{4,10})/;
+                if (phone.test(rgt.value) || Email.test(rgt.value) || qq.test(rgt.value)) {
+                    message1.className = 'message_right';
+                    rgt.className = 'rgt';
+                    message1.innerHTML = '√';
+                    sus1 = 1;
+                    flag = true;
+                } else if (rgt == "") {
+                    flag = false;
+                } else {
+                    message1.className = 'message_wrong';
+                    rgt.className = 'ipt_ero';
+                    message1.innerHTML = '您输入的格式不正确';
+                    flag = false;
+                }
+                return flag;
+            }
+            var pswd1 = document.querySelector('.pswd1');
+            var message2 = document.querySelector('.message2');
+            pswd1.onblur = function() {
+                    if (this.value.length < 6 || this.value.length > 20) {
+                        message2.className = 'message_wrong';
+                        pswd1.className = 'ipt_ero';
+                        message2.innerHTML = '密码长度要求6~20位';
+                    } else {
+                        message2.className = 'message_right';
+                        pswd1.className = 'pswd1';
+                        message2.innerHTML = '√';
+                        sus2 = 1;
+                    }
+                }
+                // 确认密码
+            var pswd2 = document.querySelector('.pswd2');
+            var message3 = document.querySelector('.message3');
+            pswd2.onblur = function() {
+                if (this.value !== pswd1.value) {
+                    message3.className = 'message_wrong';
+                    pswd2.className = 'ipt_ero';
+                    message3.innerHTML = '您输入的密码不一致';
+                } else {
+                    message3.className = 'message_right';
+                    pswd2.className = 'pswd2';
+                    message3.innerHTML = '√';
+                    sus3 = 1;
+                }
+            }
+            var sbt = document.querySelector('.sbt');
+            sbt.onclick = function() {
+                    if (rgt.value == "") {
+                        alert("账号不得为空");
+                    } else if (pswd1.value == "") {
+                        alert("密码不得为空");
+                    } else if (pswd2.value == "") {
+                        alert("确认密码不得为空");
+                    } else {
+                        if (sus1 == 1 && sus2 == 1 && sus3 == 1) {
+                            alert("注册成功")
+                        } else {
+                            alert('格式错误');
+                        }
+                    }
+                }
+                // 登录界面js代码
+                // 登录
+            var lg_rgt = document.querySelector('.lg_rgt');
+            var login_message1 = document.querySelector('.login_message1');
+            lg_rgt.onblur = function() {
+                if (this.value == '') {
+                    login_message1.className = 'message_wrong';
+                    lg_rgt.className = 'ipt_ero';
+                    login_message1.innerHTML = '账号不得为空';
+                } else {
+                    login_message1.className = 'message_right';
+                    lg_rgt.className = 'lg_rgt';
+                    login_message1.innerHTML = '';
+                }
+            }
+            var lg_pswd1 = document.querySelector('.lg_pswd1');
+            var login_message2 = document.querySelector('.login_message2');
+            // 密码
+            lg_pswd1.onblur = function() {
+                    if (this.value == '') {
+                        login_message2.className = 'message_wrong';
+                        lg_pswd1.className = 'ipt_ero';
+                        login_message2.innerHTML = '密码不得为空';
+                    } else {
+                        login_message2.className = 'message_right';
+                        lg_pswd1.className = 'lg_pswd1';
+                        login_message2.innerHTML = '';
+                    }
+                }
+                //计算器页面
+            var num = 0;
+            var result = 0;
+            var numshow = "0";
+            var operate = 0; //判断输入状态
+            var calcul = 0; //判断计算状态
+            var quit = 0; //防止重复按键
+            function command(num) {
+                var str = String(document.calculator.numScreen.value); //获得当前显示数据
+                str = (str != "0") ? ((operate == 0) ? str : "") : "";
+                str = str + String(num);
+                document.calculator.numScreen.value = str; //刷新
+                operate = 0; //重置
+                quit = 0;
+            }
+
+            function dzero() { //00
+                var str = String(document.calculator.numScreen.value);
+                str = (str != "0") ? ((operate == 0) ? str + "00" : "0") : "0";
+                document.calculator.numScreen.value = str;
+                operate = 0;
+            }
+
+            function dot() { //.
+                var str = String(document.calculator.numScreen.value);
+                str = (str != "0") ? ((operate == 0) ? str : "0") : "0";
+                for (i = 0; i <= str.length; i++) {
+                    if (str.substr(i, 1) == ".") return false;
+                }
+                str = str + ".";
+                document.calculator.numScreen.value = str;
+                operate = 0;
+            }
+
+            function del() { //退格
+                var str = String(document.calculator.numScreen.value);
+                str = (str != "0") ? str : "";
+                str = str.substr(0, str.length - 1);
+                str = (str != "") ? str : "0";
+                document.calculator.numScreen.value = str;
+            }
+
+            function clearscreen() { //清空
+                num = 0;
+                result = 0;
+                numshow = "0";
+                document.calculator.numScreen.value = "0";
+            }
+
+            function plus() { //加法
+                calculate();
+                operate = 1;
+                calcul = 1;
+            }
+
+            function minus() { //减法
+                calculate();
+                operate = 1;
+                calcul = 2;
+            }
+
+            function times() { //乘法
+                calculate();
+                operate = 1;
+                calcul = 3;
+            }
+
+            function divide() { //除法
+                calculate();
+                operate = 1;
+                calcul = 4;
+            }
+
+            function persent() { //求余
+                calculate();
+                operate = 1;
+                calcul = 5;
+            }
+
+            function equal() {
+                calculate(); //等于
+                operate = 1;
+                num = 0;
+                result = 0;
+                numshow = "0";
+            }
+            //
+            function calculate() {
+                numshow = Number(document.calculator.numScreen.value);
+                if (num != 0 && quit != 1) {
+                    switch (calcul) {
+                        case 1:
+                            result = num + numshow;
+                            break;
+                        case 2:
+                            result = num - numshow;
+                            break;
+                        case 3:
+                            result = num * numshow;
+                            break;
+                        case 4:
+                            if (numshow != 0) {
+                                result = num / numshow;
+                            } else { //防止除0等于本身的情况
+                                document.getElementById("note").innerHTML = "被除数不能为零！";
+                                setTimeout(clearnote, 4000)
+                            }
+                            break;
+                        case 5:
+                            result = num % numshow;
+                            break;
+                    }
+                    quit = 1;
+                } else {
+                    result = numshow;
+                }
+                numshow = String(result);
+                document.calculator.numScreen.value = numshow;
+                num = result; //存储当前数字
+            }
+
+            function clearnote() { //清空
+                document.getElementById("note").innerHTML = "";
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #c9c9dd;
+    text-decoration: none;
+}
+
+h1 {
+    margin-left: 110px;
+    padding-top: 30px;
+}
+
+h2 {
+    padding-top: 58px;
+    text-align: center;
+}
+
+.disn {
+    display: none;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #ffffff;
+    font: 14px/1.5 Microsoft YaHei, Heiti SC;
+    min-width: 1300px;
+    text-align: center;
+}
